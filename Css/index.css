@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Nunito+Sans&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793);
+}
+.wrapper {
+  width: 605px;
+  background-image: linear-gradient(to right top, #008793, #00bf72);
+  border-radius: 15px;
+  padding: 30px 30px 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.wrapper header {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper .content {
+  margin: 35px 0;
+}
+.content .quote-area {
+  display: flex;
+  justify-content: center;
+}
+.quote-area i {
+  font-size: 15px;
+  color: purple;
+}
+.quote-area i:first-child {
+  margin: 3px 10px 0 0;
+}
+.quote-area i:last-child {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 3px 10px;
+}
+.quote-area .quote {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+  word-break: break-all;
+}
+.content .author {
+  margin-top: 20px;
+  display: flex;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  justify-content: flex-end;
+}
+.author span:first-child {
+  margin: -5px 5px 0 0;
+  font-family: monospace;
+}
+.wrapper .buttons {
+  border-top: 1px solid #fff;
+}
+.buttons .features {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.features ul {
+  display: flex;
+}
+.features ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  color: #5372f0;
+  background: #fff;
+  margin: 0 5px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #5372f0;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(46, 44, 44, 0.178) 0px 15px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.features ul li:hover {
+  color: #fff;
+  background: #C763C2;
+}
+
+/* Buttons */
+.features button {
+  padding: 10px 15px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #5372f0;
+  position: relative;
+  font-weight: 600;
+  font-size: 12px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #5372f0;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+button.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
+}
+
+/* Media Quaries */
+@media (max-width: 550px) {
+  .wrapper {
+    width: 320px;
+  }
+  .wrapper header {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .wrapper .content {
+    margin: 15px 0;
+  }
+  .features ul li {
+    width: 40px;
+    height: 40px;
+  }
+}
